@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "Inter";
+    src: url('/assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* || VARIABLES */
+    --ACTIVE-CARD-LINK-BG-COLOR: hsl(75, 94%, 57%);
+    --ACTIVE-LINK-TEXT-COLOR: hsl(0, 0%, 12%);
+    --BG-COLOR: hsl(0, 0%, 8%);
+    --CARD-BG-COLOR: hsl(0, 0%, 12%);
+    --CARD-LINK-BG-COLOR: hsl(0, 0%, 20%);
+    --SPECIAL-TEXT-COLOR: hsl(75, 94%, 57%);
+    --TEXT-COLOR: hsl(0, 0%, 100%);
+    --FONT-SIZE: 14px;
+    --LINKS-WEIGHT: 600;
+    --HEADER-WEIGHT: 700;
+    --SPECIAL-TEXT-WEIGHT: 600;
+}
+
+body {
+    background-color: var(--BG-COLOR);
+    font-family: Inter;
+    font-size: var(--FONT-SIZE);
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: var(--TEXT-COLOR);
+    min-width: 320px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 0.5rem;
+}
+footer a { 
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--SPECIAL-TEXT-COLOR);
+}
+footer a:hover {
+    opacity: 0.6;
+}
+/* || CLASS STYLES */
+.cardContainer {
+    background-color: var(--CARD-BG-COLOR);
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.avatar {
+    width: clamp(48px, 30%, 176px);
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.avatarName {
+    font-weight: var(--HEADER-WEIGHT);
+    margin-bottom: 0.75rem;
+}
+.avatarLocation {
+    color: var(--SPECIAL-TEXT-COLOR);
+    font-weight: var(--SPECIAL-TEXT-WEIGHT);
+    margin-bottom: 1.5rem;
+}
+
+.quote {
+    font-size: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.link {
+    text-align: center;
+    width: 100%;
+    background-color: var(--CARD-LINK-BG-COLOR);
+    display: block;
+    margin-bottom: 1rem;
+    padding: 0.75rem 0;
+    color: var(--TEXT-COLOR);
+    text-decoration: none;
+    font-weight: var(--LINKS-WEIGHT);
+    border-radius: 10px;
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+    background-color: var(--ACTIVE-CARD-LINK-BG-COLOR);
+    color: var(--ACTIVE-LINK-TEXT-COLOR);
+}
+
+
+/* || UTILITY CLASSES */
+.nowrap {
+    text-wrap: nowrap;
+}
